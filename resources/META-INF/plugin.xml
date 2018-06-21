@@ -1,0 +1,43 @@
+<idea-plugin>
+    <id>lt.martynassateika.idea.inspection</id>
+    <name>My IntelliJ IDEA Inspections</name>
+    <version>1.0</version>
+    <vendor email="martynas.sateika@gmail.com" url="http://www.martynassateika.lt">Martynas Sateika</vendor>
+
+    <description><![CDATA[
+            A collection of Java inspections I use that aren't bundled with IntelliJ.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <p><b>1.0</b> (2018-06-21)</p>
+      <ul>
+        <li>Added 3 initial inspections:
+            <ul>
+                <li>'Arquillian' test class name does not end in 'IT'</li>
+                <li>Single argument passed to 'Objects.hash'</li>
+                <li>'Objects.requireNonNull' without 'message' argument</li>
+            </ul>
+        </li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <inspectionToolProvider implementation="lt.martynassateika.idea.inspection.InspectionProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
