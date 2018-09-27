@@ -10,13 +10,13 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * @author martynas.sateika
- * @since 1.0.1
+ * @since 1.1.0
  */
 public class NowWithoutArgumentsInspection extends MyBaseJavaLocalInspectionTool {
 
   @NotNull
   public String getDisplayName() {
-    return "JSR310 class 'now' called with no arguments";
+    return "JSR310 class 'now' method called with no arguments";
   }
 
   @NotNull
@@ -30,7 +30,8 @@ public class NowWithoutArgumentsInspection extends MyBaseJavaLocalInspectionTool
           PsiClass containingClass = psiMethod.getContainingClass();
           if (isJsr310Class(containingClass)) {
             if (expression.getArgumentList().isEmpty()) {
-              holder.registerProblem(expression, "JSR310 class 'now' called with no arguments");
+              holder.registerProblem(expression,
+                  "JSR310 class 'now' method called with no arguments");
             }
           }
         }
