@@ -16,6 +16,7 @@ public class InspectionProvider implements InspectionToolProvider {
     public Class[] getInspectionClasses() {
         return new Class[]{
                 ArquillianTestNotIntegrationTestInspection.class,
+                NowWithoutArgumentsInspection.class,
                 ObjectsHashWithSingleArgumentInspection.class,
                 ObjectsRequireNonNullWithoutMessageInspection.class
         };
