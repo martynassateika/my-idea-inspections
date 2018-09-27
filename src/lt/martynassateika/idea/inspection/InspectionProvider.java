@@ -11,15 +11,16 @@ import org.jetbrains.annotations.NotNull;
  */
 public class InspectionProvider implements InspectionToolProvider {
 
-    @NotNull
-    @Override
-    public Class[] getInspectionClasses() {
-        return new Class[]{
-                ArquillianTestNotIntegrationTestInspection.class,
-                NowWithoutArgumentsInspection.class,
-                ObjectsHashWithSingleArgumentInspection.class,
-                ObjectsRequireNonNullWithoutMessageInspection.class
-        };
-    }
+  @NotNull
+  @Override
+  public Class[] getInspectionClasses() {
+    return new Class[]{
+        ArquillianTestNotIntegrationTestInspection.class,
+        InvalidTemporalUnitArithmeticInspection.class,
+        NowWithoutArgumentsInspection.class,
+        ObjectsHashWithSingleArgumentInspection.class,
+        ObjectsRequireNonNullWithoutMessageInspection.class
+    };
+  }
 
 }

@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>Reports instances of an invalid 'ChronoUnit' passed to one of the 'plus' and 'minus' methods on
+  JSR310 classes.</p>
+<!-- tooltip end -->
+<p>Though documented in JavaDocs, it is easy to assume a certain ChronoUnit can be added to a
+  Temporal, when in fact it cannot. For example, adding 'ChronoUnit.WEEKS' to a 'java.time.Instant'
+  causes a runtime exception to be thrown.</p>
+</body>
+</html>
